@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: #ddd;
+  padding: 80px;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Indie Flower", "Comic Sans MS";
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+  letter-spacing: 0.1em;
+  font-size: 48px;
+}
+
+#texto {
+  padding: 16px;
+  width: 100%;
+  height: 80px;
+  font-size: 16px;
+  color: #000;
+  border: 2px solid #fff;
+  margin-bottom: 20px;
+}
+
+#resultado {
+  border: 1px dashed #ccc;
+  padding: 40px;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  font-family: "Indie Flower", "Comic Sans MS";
+  text-align: left;
+}
+
+#resultado span {
+  border: solid 1px transparent;
+  display: inline-block;
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+}
+
+label {
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+  color: #fff;
+  border: solid 1px #fff;
+  margin: 0 8px;
+}
+
+label[for=tamanho] {
+    cursor: initial;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#contorno:checked ~ #resultado span {
+  border: solid 1px #fff;
+  text-shadow: none;
+}
+
+#maiuscula:checked ~ #resultado span {
+  text-transform: uppercase;
+}
+
+input:checked + label {
+  background-color: #666;
+}

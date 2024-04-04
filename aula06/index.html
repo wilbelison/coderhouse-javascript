@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Maluco</title>
+    <link rel="stylesheet" href="default.css">
+    <script defer type="text/javascript" src="./index.js"></script>
+</head>
+<body>
+    <h1>Texto Maluco</h1>
+    <textarea name="texto" id="texto">Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Leite de capivaris, leite de mula manquis sem cabeça. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Negão é teu passadis, eu sou faxa pretis.</textarea>
+    <input type="checkbox" name="contorno" id="contorno"><label for="contorno">Contornos</label>
+    <input type="checkbox" name="maiuscula" id="maiuscula"><label for="maiuscula">Letras maiuscúlas</label>
+    <input type="range" name="tamanho" id="tamanho" min="10" max="48" list="marcadores" value="24"> <label for="tamanho">Tamanho: 24px</label>
+    <datalist id="marcadores">
+        <option value="10">10px</option>
+        <option value="48">48px</option>
+    </datalist>
+    <p id="resultado"></p>
+</body>
+</html>
