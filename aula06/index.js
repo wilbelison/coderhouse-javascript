@@ -17,12 +17,25 @@ function letraMaluca(letra) {
 function textoMaluco() {
   const texto = campoTexto.value;
   resultado.innerHTML = "";
-  for (letra of texto) { // eu também poderia usar for (i = 0; i < texto.length; i++) e usar texto[i] para pegar cada letra
-    resultado.append(letra == " " ? " " : letraMaluca(letra));
+  // eu também poderia usar for (i = 0; i < texto.length; i++) e usar texto[i] para pegar cada letra
+  for (letra of texto) {
+    switch (letra) {
+      case " ":
+        resultado.innerHTML += "&nbsp";
+        break;
+      case "\n":
+        resultado.innerHTML += "<br />";
+        break;
+      default:
+        resultado.append(letraMaluca(letra));
+        break;
+    }
   }
 }
 
 tamanho.addEventListener("input", (evento) => {
   resultado.style.fontSize = evento.target.value + "px";
-  document.querySelector("label[for=tamanho]").innerHTML = `Tamanho: ${evento.target.value}px`;
+  document.querySelector(
+    "label[for=tamanho]"
+  ).innerHTML = `Tamanho: ${evento.target.value}px`;
 });
